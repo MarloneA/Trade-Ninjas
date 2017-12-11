@@ -16,7 +16,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"testBB.js"
+    "start":"node testBB.js"
   },
   "author": "Marlone",
   "license": "ISC"

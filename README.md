@@ -25,7 +25,7 @@ This installs the API dependencies locally on a node_modules folder
 
 To run the application, fire up
 
-`$ node testBB`
+`$ npm start`
 
 
 ## API reference
