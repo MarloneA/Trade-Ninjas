@@ -1,6 +1,6 @@
 var express = require('express');
 var cookieParser = require('cookie-parser');
-var fs = require('fs');
+var path = require('path');
 
 var indicator = require('./indicators')
 var candlestick = require('./candlestick')
@@ -21,11 +21,8 @@ var doji = candlestick.doji();
 var threeblackcrows = candlestick.threeblackcrows();
 var threewhitesoldiers = candlestick.threewhitesoldiers();
 
-app.get("/", function(req, res){
-  res.writeHead(200, {'Content-Type':'text/html'})
-  var docs = fs.createReadStream(__dirname, '/api_doc.html', 'utf8');
-
-  docs.pipe(res);
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.post("/cookies", function(req,res){
