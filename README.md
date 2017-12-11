@@ -1,15 +1,15 @@
-Trade Ninjas
+##Trade Ninjas##
 
 Trade Ninjas is a simple APi that provides access to trading indicators and chart patterns
 
 
-Framework used
+##Framework used##
 
 Built with
 
 - Node
 
-Installation
+##Installation##
 
 Clone or download the repository:
 
@@ -28,18 +28,18 @@ To run the application, fire up
 `$ node testBB`
 
 
-API reference
+##API reference##
 
 The api documentation is hosted as the homepage of the application. Reference material for the API can be found at API
 
-Live Application
+##Live Application##
 
 The Live API is hosted here on heroku
 
-Contribute
+##Contribute##
 
 To contribute to the project, create a Pull Request on a feature branch from develop branch.
 
-License
+##License##
 
 MIT © 2017 Marlone Akidiva
