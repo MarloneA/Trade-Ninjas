@@ -19,7 +19,7 @@ var rsi = indicator.RSI();
 var doji = candlestick.doji();
 var threeblackcrows = candlestick.threeblackcrows();
 
-app.get("/", function(req,res){
+app.get("/cookies", function(req,res){
 
   res.cookie('bollinger', bollingerBand);
   res.cookie('macd', macd);
@@ -51,7 +51,5 @@ app.get("/patterns", function(req,res){
 
 
 app.listen(port, function(){
-  console.log("listening to port 3000")
-  console.log(bollingerBand[0]['pb'])
-
+  console.log(`listening to port ${port}`)
 });
