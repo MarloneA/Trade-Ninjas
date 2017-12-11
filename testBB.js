@@ -1,5 +1,6 @@
 var express = require('express');
 var cookieParser = require('cookie-parser');
+var fs = require('fs');
 
 var indicator = require('./indicators')
 var candlestick = require('./candlestick')
@@ -20,7 +21,14 @@ var doji = candlestick.doji();
 var threeblackcrows = candlestick.threeblackcrows();
 var threewhitesoldiers = candlestick.threewhitesoldiers();
 
-app.get("/cookies", function(req,res){
+app.get("/", function(req, res){
+  res.writeHead(200, {'Content-Type':'text/html'})
+  var docs = fs.createReadStream(__dirname, '/api_doc.html', 'utf8');
+
+  docs.pipe(res);
+});
+
+app.post("/cookies", function(req,res){
 
   res.cookie('bollinger', bollingerBand);
   res.cookie('macd', macd);
@@ -107,9 +115,6 @@ app.get("/patterns/threewhitesoldiers", function(req,res){
 
                           }));
 });
-
-
-
 
 
 
