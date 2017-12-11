@@ -11,6 +11,9 @@
     "technicalindicators": "^1.0.20"
   },
   "devDependencies": {},
+  "repository" :{ "type" : "git",
+                  "url" : "https://github.com/MarloneA/Trade-Ninjas.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"testBB.js"
