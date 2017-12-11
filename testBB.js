@@ -6,6 +6,8 @@ var candlestick = require('./candlestick')
 
 var app = express();
 
+var port = process.env.PORT || 3000;
+
 app.use(cookieParser());
 
 //Indicators
@@ -38,7 +40,7 @@ app.get("/indicators", function(req,res){
 
 app.get("/patterns", function(req,res){
   res.send(JSON.stringify({
-                            
+
                             "dojiPattern":req.cookies.dojiPattern,
                             "threeblackcrows":req.cookies.threeblackcrows
 
@@ -48,7 +50,7 @@ app.get("/patterns", function(req,res){
 
 
 
-app.listen(3000, function(){
+app.listen(port, function(){
   console.log("listening to port 3000")
   console.log(bollingerBand[0]['pb'])
 
