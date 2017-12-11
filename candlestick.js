@@ -27,3 +27,18 @@ module.exports.threeblackcrows = function(){
   return threeblackcrows(input);
 
 }
+
+module.exports.threewhitesoldiers = function(){
+
+  var threewhitesoldiers = require('technicalindicators').threewhitesoldiers;
+
+  var input = {
+    open: [21.12,21.48,21.80],
+    close: [21.65,22.20,22.65],
+    high: [21.83,22.40,22.80],
+    low: [20.85,21.36,21.66]
+  }
+
+  return threewhitesoldiers(input);
+
+}
