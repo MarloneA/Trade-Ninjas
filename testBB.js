@@ -1,5 +1,6 @@
 var express = require('express');
 var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 var path = require('path');
 
 var indicator = require('./indicators')
@@ -10,7 +11,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 app.use(cookieParser());
-
+app.use(bodyParser());
 //Indicators
 var bollingerBand = indicator.bollinger();
 var macd = indicator.MACD();
@@ -47,6 +48,13 @@ app.get("/indicators", function(req,res){
                             "3":"RSI"
 
                           }));
+});
+
+app.post("/datafeed", function(req,res){
+
+  res.writeHead(200, {'Content-Type':'application/json'})
+  res.end(JSON.stringify({"message" : "received"}));
+  console.log(JSON.stringify(req.body));
 });
 
 app.get("/patterns", function(req,res){

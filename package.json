@@ -4,6 +4,7 @@
   "description": "A simple API that gives access to a variety of technical indicators",
   "main": "testBB.js",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "connect": "^3.6.5",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
@@ -11,12 +12,13 @@
     "technicalindicators": "^1.0.20"
   },
   "devDependencies": {},
-  "repository" :{ "type" : "git",
-                  "url" : "https://github.com/MarloneA/Trade-Ninjas.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarloneA/Trade-Ninjas.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node testBB.js"
+    "start": "node testBB.js"
   },
   "author": "Marlone",
   "license": "ISC"
