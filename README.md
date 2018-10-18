@@ -1,6 +1,6 @@
 # Trade Ninjas
 
-Trade Ninjas is a simple APi that provides access to trading indicators and chart patterns
+Trading API is a simple APi that provides access to trading indicators and chart patterns
 
 
 ## Framework used
@@ -8,6 +8,8 @@ Trade Ninjas is a simple APi that provides access to trading indicators and char
 Built with
 
 - Node
+- Express
+- Mongodb
 
 ## Installation
 
