@@ -1,4 +1,4 @@
-# Trade Ninjas
+# Trading API
 
 Trading API is a simple APi that provides access to trading indicators and chart patterns
 
